@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Alike+Angular&family=Asul&family=Concert+One&family=Eczar&family=Fruktur&family=Kavoon&family=Neuton&family=Space+Mono&family=Tillana&family=Work+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  color: hsl(281, 62%, 10%);
+  line-height: 200%;
+}
+body a {
+  text-decoration: none;
+  color: #fff;
+}
+body a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+section:not(.welcomePage) {
+  margin-top: 5rem;
+}
+.btn {
+  min-height: 40px;
+}
+.subtitle {
+  color: hsla(0, 0%, 18%, 0.603);
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+}
+.uil-arrow-up {
+  font-size: 24px;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsla(0, 0%, 69%, 0.603);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 50%, 0.603);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(0, 0%, 30%, 0.808);
+}
+
+.nav-item .actived {
+  color: #922ec1;
+}
+.navbar {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(153, 153, 153, 0.25);
+  text-align: center;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  color: hsl(281, 62%, 10%);
+}
+.nav-link:hover {
+  color: hsl(281, 62%, 47%);
+}
+.btn-purple {
+  background-color: hsl(281, 62%, 47%);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  transition: ease-out 0.5s;
+}
+.btn-purple:hover {
+  background-color: hsl(281, 62%, 37%);
+  color: #fff;
+}
+.uil-search {
+  font-size: 20px;
+}
+
+.welcomePage {
+  padding: 15rem 0 10rem 0;
+  background-color: hsl(0, 0%, 89%);
+}
+.title-welcomePage span {
+  color: #922ec1;
+}
+.subtitle-welcomePage {
+  margin-top: 2rem;
+  color: hsla(0, 0%, 18%, 0.603);
+}
+.button-welcomePage {
+  width: 200px;
+  height: 50px;
+  margin-top: 2rem;
+}
+
+.rectangle {
+  width: 100%;
+  height: 300px;
+  background-color: hsl(0, 0%, 84%);
+  border-radius: 10px;
+}
+
+.card {
+  background-color: hsla(0, 0%, 95%, 0.603);
+  border: none;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+.card-text {
+  color: hsla(0, 0%, 18%, 0.603);
+}
+.card-body a {
+  display: flex;
+  justify-content: center;
+}
+
+.tentang-kami {
+  background-color: hsl(281, 62%, 43%);
+  color: hsl(282, 100%, 95%);
+  padding: 5rem 0;
+}
+.subtitle-tentang-kami {
+  color: hsl(282, 100%, 95%);
+}
+
+#footer {
+  background-color: hsl(281, 62%, 30%);
+  padding: 1rem 0;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .welcomePage {
+    padding: 12rem 0 5rem 0;
+  }
+}

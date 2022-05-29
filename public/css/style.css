@@ -98,15 +98,22 @@ section:not(.welcomePage) {
 }
 
 .welcomePage {
-  padding: 15rem 0 10rem 0;
+  padding: 16rem 0 10rem 0;
   background-color: hsl(0, 0%, 89%);
+  background-image: url('../img/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title-welcomePage {
+  color: #ffffff;
 }
 .title-welcomePage span {
-  color: #922ec1;
+  color: #D1A0E8;
 }
 .subtitle-welcomePage {
   margin-top: 2rem;
-  color: hsla(0, 0%, 18%, 0.603);
+  /*color: hsla(0, 0%, 18%, 0.603);*/
+  color: #ffffff;
 }
 .button-welcomePage {
   width: 200px;

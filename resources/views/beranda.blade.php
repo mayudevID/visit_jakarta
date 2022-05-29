@@ -21,7 +21,9 @@
     <i class="uil uil-arrow-up"></i>
   </button>
   <!-- Akhir scroll top button -->
-  @include('partials.navbar')
+  <header>
+    @include('partials.navbar')
+  </header>
 
   <main>
     <!-- Welcome -->
@@ -37,13 +39,11 @@
     <section id="museum" class="container museum">
       <div class="row d-flex justify-content-evenly">
         <div class="col">
-          <div class="rectangle">
-
-          </div>
+          <img class="rectangle" src="img/museum.png" alt="Museum">
         </div>
         <div class="col text-museum align-self-center">
           <h1 class="text-decoration-underline">Museum</h1>
-          <p class="subtitle subtitle-museum mt-3 fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veritatis ipsa delectus beatae incidunt eveniet consectetur dolores nemo? Iste, facilis modi? Corporis, error quasi. Maiores excepturi vitae dolor saepe qui!</p>
+          <p class="subtitle subtitle-museum mt-3 fw-semibold">Kita hidup sekarang karena masa lalu, dan masa depan adalah kita hari ini. Demikian kata seorang bijak yang menggambarkan pentingnya sejarah. Nah, salah satu cara belajar sejarah dengan cara yang menyenangkan adalah dengan mengunjungi museum.</p>
           <button class="btn btn-purple button-museum mt-4"><a href="#">Selengkapnya</a></button>
         </div>
       </div>
@@ -54,13 +54,11 @@
       <div class="row d-flex justify-content-evenly">
         <div class="col text-galeri align-self-center">
           <h1 class="text-decoration-underline">Galeri</h1>
-          <p class="subtitle subtitle-galeri mt-3 fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veritatis ipsa delectus beatae incidunt eveniet consectetur dolores nemo? Iste, facilis modi? Corporis, error quasi. Maiores excepturi vitae dolor saepe qui!</p>
+          <p class="subtitle subtitle-galeri mt-3 fw-semibold">Galeri adalah ruangan atau bangunan yang digunakan sebagai tempat memajang barang, karya seni, dan lain-lain.</p>
           <button class="btn btn-purple button-museum mt-4"><a href="#">Selengkapnya</a></button>
         </div>
         <div class="col">
-          <div class="rectangle">
-
-          </div>
+          <img class="rectangle" src="img/galeri.jpg" alt="Galeri">
         </div>
 
       </div>
@@ -72,7 +70,7 @@
         <h1 class="text-decoration-underline text-center">Kuliner</h1>
       </div>
       <div class="subtitle kuliner-subtitle">
-        <p class="subtitle subtitle-kuliner mt-3 fw-semibold text-center" style="color: hsla(0, 0%, 18%, 0.603);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veritatis ipsa delectus beatae incidunt eveniet consectetur dolores nemo? Iste, facilis modi? Corporis, error quasi. Maiores excepturi vitae dolor saepe qui!</p>
+        <p class="subtitle subtitle-kuliner mt-3 fw-semibold text-center" style="color: hsla(0, 0%, 18%, 0.603);">Sejarah nusantara melihat masakan Indonesia sebagai hasil persilangan budaya. Saat ini, kreativitas anak muda berkontribusi pada keragaman makanan dan minuman di Jakarta. Belum lagi beragamnya gaya hidup diet (modified diet), dari vegetarian (tanpa daging), vegan (tanpa makanan hewani) hingga ketogenik (makanan rendah karbohidrat dan tinggi lemak), yang menciptakan kancah kuliner baru.</p>
       </div>
 
       <div class="wrapper">
@@ -116,13 +114,11 @@
     <section id="tempat-rekreasi" class="container tempat-rekreasi">
       <div class="row d-flex justify-content-evenly">
         <div class="col">
-          <div class="rectangle">
-
-          </div>
+          <img class="rectangle" src="img/rekreasi.jpg" alt="Tempat Rekreasi">
         </div>
         <div class="col text-tempat-rekreasi align-self-center">
           <h1 class="text-decoration-underline">Tempat Rekreasi</h1>
-          <p class="subtitle subtitle-tempat-rekreasi mt-3 fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veritatis ipsa delectus beatae incidunt eveniet consectetur dolores nemo? Iste, facilis modi? Corporis, error quasi. Maiores excepturi vitae dolor saepe qui!</p>
+          <p class="subtitle subtitle-tempat-rekreasi mt-3 fw-semibold">Jakarta memiliki banyak tempat rekreasi dan taman bermain bagi warga atau siapa saja yang berkunjung ke ibu kota. Dari taman bermain di pusat kota hingga area bermain alam di area pulau, kami tidak akan pernah kehabisan wahana.</p>
           <button class="btn btn-purple button-tempat-rekreasi mt-4"><a href="#">Selengkapnya</a></button>
         </div>
       </div>

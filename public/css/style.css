@@ -105,7 +105,7 @@ section:not(.welcomePage) {
 .welcomePage {
   padding: 16rem 0 10rem 0;
   background-color: hsl(0, 0%, 89%);
-  background-image: url('../img/banner.jpg');
+  background-image: url('../img/beranda/banner.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -162,15 +162,55 @@ section:not(.welcomePage) {
   color: hsl(282, 100%, 95%);
 }
 
-#footer {
+/* Footer */
+footer {
   background-color: hsl(281, 62%, 30%);
   padding: 1rem 0;
   color: white;
 }
+.subtitle-footer {
+  color: hsl(282, 100%, 92%);
+}
+.medsos-wrapper {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-around;
+  transition: ease-out 0.5s;
+}
+.medsos-wrapper i:hover {
+  color: #922ec1;
+  cursor: pointer;
+}
+
+/* Museum */
+.museum-wrapper {
+  margin-top: 8rem;
+}
+.list-group-item.active {
+  background-color: #922ec1;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Galeri */
+.galeri-wrapper {
+  margin-top: 8rem;
+}
+
+/* Rekreasi */
+.rekreasi-wrapper {
+  margin-top: 8rem;
+}
 
 /* Responsive */
 @media screen and (max-width: 600px) {
+  /* Beranda */
   .welcomePage {
-    padding: 12rem 0 5rem 0;
+    padding: 15rem 0 5rem 0;
+  }
+
+  /* Museum */
+  .museum-wrapper {
+    margin-top: 3rem;
   }
 }

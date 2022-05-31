@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id');
+            $table->foreignId('user_id');
+            $table->string('title');
+            $table->string('slug');
+            $table->enum('location', ['jp', 'ju', 'jb','jt','js']);
+            $table->text('description');
+            $table->text('body');
             $table->timestamps();
         });
     }

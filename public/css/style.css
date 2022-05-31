@@ -1,4 +1,7 @@
+/*
 @import url("https://fonts.googleapis.com/css2?family=Alike+Angular&family=Asul&family=Concert+One&family=Eczar&family=Fruktur&family=Kavoon&family=Neuton&family=Space+Mono&family=Tillana&family=Work+Sans&display=swap");
+*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
   padding: 0;
@@ -29,6 +32,7 @@ section:not(.welcomePage) {
   min-height: 40px;
 }
 .subtitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: hsla(0, 0%, 18%, 0.603);
 }
 #myBtn {
@@ -77,6 +81,7 @@ section:not(.welcomePage) {
   align-items: center;
 }
 .nav-link {
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: hsl(281, 62%, 10%);
 }
 .nav-link:hover {
@@ -110,10 +115,15 @@ section:not(.welcomePage) {
 .title-welcomePage span {
   color: #D1A0E8;
 }
+.subtitle-welcomePage span {
+  color: #D1A0E8;
+  
+}
 .subtitle-welcomePage {
   margin-top: 2rem;
   /*color: hsla(0, 0%, 18%, 0.603);*/
   color: #ffffff;
+  font-size: large;
 }
 .button-welcomePage {
   width: 200px;

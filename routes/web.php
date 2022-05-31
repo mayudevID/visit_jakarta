@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,37 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('beranda', [
+        'title' => 'beranda',
+    ]);
 });
-Auth::routes();
 
+Route::get('/museum', function () {
+    return view('museum', [
+        'title' => 'museum',
+    ]);
+});
+
+Route::get('/kuliner', function () {
+    return view('kuliner', [
+        'title' => 'kuliner',
+    ]);
+});
+
+Route::get('/galeri', function () {
+    return view('galeri', [
+        'title' => 'galeri',
+    ]);
+});
+
+Route::get('/rekreasi', function () {
+    return view('rekreasi', [
+        'title' => 'rekreasi',
+    ]);
+});
+
+Route::get('/login', [LoginController::class, 'index']); 
+
+/*
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+*/

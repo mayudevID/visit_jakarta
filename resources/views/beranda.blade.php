@@ -1,36 +1,12 @@
-<!doctype html>
-<html lang="en">
+@extends('layout.app')
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Visit Jakarta</title>
-
-  <!-- CSS Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" type="text/css">
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/style.css" type="text/css">
-  <!-- Unicons (Icons) -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-</head>
-
-<body>
-  <!-- Scroll top button -->
-  <button onclick="topFunction()" class="btn btn-purple" id="myBtn" title="Go to top">
-    <i class="uil uil-arrow-up"></i>
-  </button>
-  <!-- Akhir scroll top button -->
-  <header>
-    @include('partials.navbar')
-  </header>
-
-  <main>
+@section('content')
+<main>
     <!-- Welcome -->
     <section id="welcomePage" class="welcomePage text-center">
       <h1 class="title-welcomePage fw-bold">Selamat Datang di <span>Visit Jakarta</span>!</h1>
-      <p class="container subtitle-welcomePage subtitle  fw-semibold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, assumenda nihil quia aliquam molestiae impedit architecto ducimus alias voluptate id libero. Architecto ipsa voluptatum magnam! Exercitationem nisi numquam suscipit veniam.</p>
-      <button class="btn btn-purple button-welcomePage"><a href="#">Gabung sekarang</a></button>
+      <p class="container subtitle-welcomePage subtitle  fw-semibold">Ingin berwisata ke Jakarta tetapi tidak tahu apa saja yang asyik untuk dikunjungi? Tenang, <span>Visit Jakarta</span> hadir untuk membantu kamu menentukan tujuan wisata. Yuk, gabung!</p>
+      <button class="btn btn-purple button-welcomePage"><a href="/login">Gabung sekarang</a></button>
 
 
     </section>
@@ -132,8 +108,10 @@
         </div>
         <div class="tentang-kami-subtitle">
           <p class="subtitle-tentang-kami mt-5 fw-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt vel veniam et cupiditate, harum aut voluptate nobis aperiam ea dicta dolore quas nihil, tempora suscipit exercitationem facilis recusandae labore aspernatur, eaque eligendi modi! Dolores voluptas quas inventore dolorum, repudiandae distinctio rerum similique possimus laudantium quos consectetur at dolore? Debitis et repellat nobis fugit eligendi sapiente nesciunt dolores quas, corporis hic! Quas sapiente nobis incidunt laboriosam alias. Deserunt, incidunt inventore!</p>
+          <!--
           <p class="subtitle-tentang-kami mt-1 fw-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt vel veniam et cupiditate, harum aut voluptate nobis aperiam ea dicta dolore quas nihil, tempora suscipit exercitationem facilis recusandae labore aspernatur, eaque eligendi modi! Dolores voluptas quas inventore dolorum, repudiandae distinctio rerum similique possimus laudantium quos consectetur at dolore? Debitis et repellat nobis fugit eligendi sapiente nesciunt dolores quas, corporis hic! Quas sapiente nobis incidunt laboriosam alias. Deserunt, incidunt inventore!</p>
           <p class="subtitle-tentang-kami mt-1 fw-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt vel veniam et cupiditate, harum aut voluptate nobis aperiam ea dicta dolore quas nihil, tempora suscipit exercitationem facilis recusandae labore aspernatur, eaque eligendi modi! Dolores voluptas quas inventore dolorum, repudiandae distinctio rerum similique possimus laudantium quos consectetur at dolore? Debitis et repellat nobis fugit eligendi sapiente nesciunt dolores quas, corporis hic! Quas sapiente nobis incidunt laboriosam alias. Deserunt, incidunt inventore!</p>
+          -->
         </div>
       </div>
     </section>
@@ -141,12 +119,19 @@
 
   <footer>
     <div id="footer">
-      <p class="text-center">Tugas Project UAS Pemrograman Web</p>
+      <!--<p class="text-center">Tugas Project UAS Pemrograman Web</p>*/-->
+      <div class="container">
+        <div class="tentang-kami-title">
+          <h1 class="text-center mt-4">Visit Jakarta</h1>
+        </div>
+        <div class="tentang-kami-subtitle">
+          <p class="subtitle-tentang-kami mt-5 fw-semibold text-center">Visit Jakarta merupakan website yang memberikan referensi berbagai tempat yang berada di kota Jakarta. Website ini diharapkan dapat menjadi rujukan pengguna untuk mendapatkan informasi mengenai tempat tersebut.</p>
+          <!--
+          <p class="subtitle-tentang-kami mt-1 fw-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt vel veniam et cupiditate, harum aut voluptate nobis aperiam ea dicta dolore quas nihil, tempora suscipit exercitationem facilis recusandae labore aspernatur, eaque eligendi modi! Dolores voluptas quas inventore dolorum, repudiandae distinctio rerum similique possimus laudantium quos consectetur at dolore? Debitis et repellat nobis fugit eligendi sapiente nesciunt dolores quas, corporis hic! Quas sapiente nobis incidunt laboriosam alias. Deserunt, incidunt inventore!</p>
+          <p class="subtitle-tentang-kami mt-1 fw-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt vel veniam et cupiditate, harum aut voluptate nobis aperiam ea dicta dolore quas nihil, tempora suscipit exercitationem facilis recusandae labore aspernatur, eaque eligendi modi! Dolores voluptas quas inventore dolorum, repudiandae distinctio rerum similique possimus laudantium quos consectetur at dolore? Debitis et repellat nobis fugit eligendi sapiente nesciunt dolores quas, corporis hic! Quas sapiente nobis incidunt laboriosam alias. Deserunt, incidunt inventore!</p>
+          -->
+        </div>
+      </div>
     </div>
   </footer>
-
-  <script src="./js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</body>
-
-</html>
+@endsection

@@ -59,8 +59,17 @@
               </div>
 
               <!-- Jakbar -->
-              <h3 class="fw-bolder" id="list-item-2">Jakarta Barat</h3>
-              <p class="subtitle fw-semibold mt-3">Belum tersedia</p>
+              <h3 class="fw-bolder mb-3" id="list-item-2">Jakarta Barat</h3>
+              <div class="row mb-5">
+                <div class="col">
+                  <img class="img-fluid" src="./img/galeri/galeri-nadi.jpeg" width="300px" style="border-radius: 10px;" alt="Galeri Nadi">
+                </div>
+                <div class="col-md-7">
+                  <h4 class="mt-3">Galeri Nadi</h4>
+                  <p class="subtitle fw-semibold mt-3">Galeri Nadi adalah ruang seni di Jakarta yang didirikan oleh seorang kolektor muda Seni Rupa Indonesia: Biantoro Santoso pada tahun 2000. Kata “Nadi” dalam bahasa Indonesia berarti denyut nadi, dan seperti namanya, artspace bermaksud untuk menghidupkan perkembangan seni rupa kontemporer di Indonesia. Galeri Nadi menampilkan karya-karya seniman seperti Agus Suwage, Handiwirman Saputra, dan Jumaldi Alfi.</p>
+                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
+                </div>
+              </div>              
 
 
               <!-- Jaksel -->
@@ -78,11 +87,29 @@
 
               <!-- Jakut -->
               <h3 class="fw-bolder mb-3" id="list-item-4">Jakarta Utara</h3>
-              <p class="subtitle fw-semibold mt-3">Belum tersedia</p>
+              <div class="row mb-5">
+                <div class="col">
+                  <img class="img-fluid" src="./img/galeri/galeri-artone.jpeg" width="300px" style="border-radius: 10px;" alt="Galeri Art One">
+                </div>
+                <div class="col-md-7">
+                  <h4 class="mt-3">Galeri Art One</h4>
+                  <p class="subtitle fw-semibold mt-3">Berlokasi di Kemayoran, Galeri Art One memiliki bangunan serba putih yang berseni. Galeri ini memamerkan lebih dari 2000 koleksi karya seni dari seniman dari berbagai dekade. Galeri Art One adalah “one-stop art destination” yang menampung galeri seniman senior sekaligus memberikan konsultasi seni, restorasi, dan pendidikan bagi seniman muda.</p>
+                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
+                </div>
+              </div>  
 
               <!-- Jaktim -->
               <h3 class="fw-bolder mb-3" id="list-item-5">Jakarta Timur</h3>
-              <p class="subtitle fw-semibold mt-3 mb-5">Belum tersedia</p>
+              <div class="row mb-5">
+                <div class="col">
+                  <img class="img-fluid" src="./img/galeri/galeri-pasarseni.jpeg" width="300px" style="border-radius: 10px;" alt="Galeri Pasar Seni">
+                </div>
+                <div class="col-md-7">
+                  <h4 class="mt-3">Galeri Pasar Seni</h4>
+                  <p class="subtitle fw-semibold mt-3">Galeri ini baru diresmikan tahun 2020 oleh Pemerintah Kota Jakarta Timur.Galeri disebut juga pasar karena berisikan kios-kios yang menjual lukisan, patung, kaset, vinyl atau piringan hitam, turntable (alat pemutar piringan hitam), lemari kayu jati, buku sastra, bingkai foto, dan alat seni lainnya.</p>
+                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
+                </div>
+              </div> 
             </div>
           </div>
         </div>

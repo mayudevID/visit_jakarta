@@ -202,6 +202,11 @@ footer {
   margin-top: 8rem;
 }
 
+/* Ksuliner */
+.kuliner-wrapper {
+  margin-top: 8rem;
+}
+
 /* Responsive */
 @media screen and (max-width: 600px) {
   /* Beranda */
@@ -213,4 +218,13 @@ footer {
   .museum-wrapper {
     margin-top: 3rem;
   }
+}
+
+/* Login */
+.login-wrapper {
+  margin-top: 8rem;
+}
+form {
+  margin-bottom: 5rem;
+  width: 400px;
 }

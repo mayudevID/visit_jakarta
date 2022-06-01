@@ -22,34 +22,37 @@
                 <li class="nav-item">
                     <a class="nav-link {{ ($title === 'rekreasi') ? 'actived' : ''}}" href="/rekreasi">Tempat Rekreasi</a>
                 </li>
-                @if (Route::current()->getName() != 'index')
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="uil uil-search"></i></a>
+                </li>
+                @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="uil uil-search"></i></a>
+                        <a class="nav-link" href="/login"><button type="button" class="btn btn-purple">Login</button></a>
                     </li>
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="/login"><button type="button" class="btn btn-purple">Login</button></a>
-                        </li>
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            Halo, &nbsp {{  Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item" href="/dashboard">
+                                {{ __('Dashboard') }}
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                @endif   
+                            <a class="dropdown-item" href="/"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="/logout" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+                 
                 </ul>
             </div>
         </div>

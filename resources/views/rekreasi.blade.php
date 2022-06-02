@@ -70,19 +70,52 @@
 
               <!-- Jakbar -->
               <h3 class="fw-bolder" id="list-item-2">Jakarta Barat</h3>
-              <p class="subtitle fw-semibold mt-3">Belum tersedia</p>
-
+              <div class="row mb-5">
+                <div class="col-md-7">
+                  <h4 class="mt-3">Kota Tua Batavia</h4>
+                  <p class="subtitle fw-semibold mt-3">Kota Tua Batavia pada sekitar abad ke-16 merupakan lokasi yang menjadi pusat perdagangan di Asia. Uniknya, keberadaan sisa-sisa masa lampau yang merupakan kawasan peninggalan Belanda tersebut sampai sekarang masih terjaga keasliannya, terutama dari sisi bangunannya.</p>
+                  <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="#">Lihat semua</a></button>
+                </div>
+                <div class="col">
+                  <img class="img-fluid" src="./img/rekreasi/kota-tua.png" width="300px" alt="Kota Tua Batavia">
+                </div>
+              </div>
               <!-- Jaksel -->
               <h3 class="fw-bolder mb-3" id="list-item-3">Jakarta Selatan</h3>
-              <p class="subtitle fw-semibold mt-3">Belum tersedia</p>
-
+              <div class="row mb-5">
+                <div class="col-md-7">
+                  <h4 class="mt-3">Taman Langsat</h4>
+                  <p class="subtitle fw-semibold mt-3">Taman Langsat adalah taman yang berada di di Jalan Langsat Kebayoran Baru Jakarta Selatan, di belakang Pasar Burung Barito. Taman ini mempunyai luas lahan seluas 3,6 hektar.</p>
+                  <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="#">Lihat semua</a></button>
+                </div>
+                <div class="col">
+                  <img class="img-fluid" src="./img/rekreasi/taman-langsat.png" width="300px" alt="Taman Langsat">
+                </div>
+              </div>
               <!-- Jakut -->
               <h3 class="fw-bolder mb-3" id="list-item-4">Jakarta Utara</h3>
-              <p class="subtitle fw-semibold mt-3">Belum tersedia</p>
-
+              <div class="row mb-5">
+                <div class="col-md-7">
+                  <h4 class="mt-3">Suaka Margasatwa Muara Angke</h4>
+                  <p class="subtitle fw-semibold mt-3">Taman Suaka Margasatwa Muara Angke merupakan destinasi wisata hutan bakau yang terletak di Jakarta Utara. Daerah ini menjadi satu-satunya hutan di Jakarta yang dilindungi oleh pemerintah. Tempat wisata ini memiliki jembatan kayu dengan panjang sekitar 843 meter yang dapat membantu untuk menelusuri hutan alami yang indah.</p>
+                  <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="#">Lihat semua</a></button>
+                </div>
+                <div class="col">
+                  <img class="img-fluid" src="./img/rekreasi/muara-angke.png" width="300px" alt="Suaka Margasatwa Muara Angke">
+                </div>
+              </div>
               <!-- Jaktim -->
               <h3 class="fw-bolder mb-3" id="list-item-5">Jakarta Timur</h3>
-              <p class="subtitle fw-semibold mt-3 mb-5">Belum tersedia</p>
+              <div class="row mb-5">
+                <div class="col-md-7">
+                  <h4 class="mt-3">Taman Mini Indonesia Indah</h4>
+                  <p class="subtitle fw-semibold mt-3">Taman ini merupakan salah satu objek wisata yang populer dikalangan wisatawan. TMII ini banyak dikunjungi oleh wisatawan karena taman mini Indonesia indah menyuguhkan keindahan menarik yang hanya dapat dijumpai di taman tersebut. Taman ini menyuguhkan keindahan objek wisata dengan tema budaya Indonesia.</p>
+                  <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="#">Lihat semua</a></button>
+                </div>
+                <div class="col">
+                  <img class="img-fluid" src="./img/rekreasi/taman-mini.png" width="300px" alt="Taman Mini Indonesia Indah">
+                </div>
+              </div>
             </div>
           </div>
         </div>

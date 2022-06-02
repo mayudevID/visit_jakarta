@@ -39,7 +39,7 @@
               </div>
               <div class="row mb-5">
                 <div class="col">
-                  <img class="img-fluid" src="./img/museum/museum-taman-prasasti.png" width="300px" style="border-radius: 10px;" alt="Museum Taman Prasasti">
+                  <img class="img-fluid" src="./img/museum/museum-taman-prasasti.jpeg" width="300px" style="border-radius: 10px;" alt="Museum Taman Prasasti">
                 </div>
                 <div class="col-md-7">
                   <h4 class="mt-3">Museum Taman Prasasti</h4>
@@ -91,7 +91,7 @@
               <h3 class="fw-bolder mb-3" id="list-item-5">Jakarta Timur</h3>
               <div class="row mb-5">
                 <div class="col">
-                  <img class="img-fluid" src="./img/museum/Museum-Perangko.jpg" width="300px" style="border-radius: 10px;" alt="Museum Perangko">
+                  <img class="img-fluid" src="./img/museum/Museum-Perangko.jpeg" width="300px" style="border-radius: 10px;" alt="Museum Perangko">
                 </div>
                 <div class="col-md-7">
                   <h4 class="mt-3">Museum Perangko</h4>

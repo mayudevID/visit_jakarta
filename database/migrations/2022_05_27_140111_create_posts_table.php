@@ -18,8 +18,9 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->enum('location', ['jp', 'ju', 'jb','jt','js']);
+            $table->string('photoUrl');
             $table->text('description');
             $table->text('body');
             $table->timestamps();

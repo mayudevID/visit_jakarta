@@ -26,90 +26,90 @@
           <div class="col">
             <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
               <!-- Jakpus -->
-              <h3 class="fw-bolder mt-3" id="list-item-1">Jakarta Pusat</h3>
-              <div class="row mb-5">
-                <div class="col-md-7">
-                  <h4 class="mt-3">Galeri Nasional Indonesia</h4>
-                  <p class="subtitle fw-semibold mt-3">Galeri Nasional Indonesia merupakan tempat pameran seni rupa modern dan kontemporer. Terdapat juga beberapa gedung yang berfungsi sebagai tempat perhelatan seni rupa Indonesia dan juga mancanegara.</p>
-                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
-                </div>
-                <div class="col">
-                  <img class="img-fluid" src="./img/galeri/galeri-nasional-indonesia.png" width="300px" alt="Galeri Nasional Indonesia">
-                </div>
-              </div>
-              <div class="row mb-5">
-                <div class="col">
-                  <img class="img-fluid" src="./img/galeri/galeri-indonesia-kaya.png" width="300px" style="border-radius: 10px;" alt="Galeri Indonesia Kaya">
-                </div>
-                <div class="col-md-7">
-                  <h4 class="mt-3">Galeri Indonesia Kaya</h4>
-                  <p class="subtitle fw-semibold mt-3">Galeri Indonesia Kaya ini merupakan ruang edutainment budaya yang berbasis digital dimana tempat ini menampilkan karya seni nusantara mulai dari alat musik tradisional, baju adat, sampai informasi tentang kuliner daerah nusantara.</p>
-                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
-                </div>
-              </div>
-              <div class="row mb-5">
-                <div class="col-md-7">
-                  <h4 class="mt-3">Galeri Bartele</h4>
-                  <p class="subtitle fw-semibold mt-3">Galeri Bartele merupakan tempat seni yang menampilkan barang - barang antik. Dalam galeri ini terdapat berbagai koleksi barang langka seperti buku, peta foto - foto, dan lukisan yang berusia sampai lebih dari 500 tahun.</p>
-                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
-                </div>
-                <div class="col">
-                  <img class="img-fluid" src="./img/galeri/galeri-bartele.png" width="300px" alt="Galeri Bartele">
-                </div>
-              </div>
+              <h3 class="fw-bolder mt-3 mb-3" id="list-item-1">Jakarta Pusat</h3>
+              @foreach ($galeries as $galery)
+                @if ($galery["location"] == "jp")
+                  <div class="row mb-5">
+                    <div class="col-md-7">
+                      <h4 class="mt-3">{{ $galery["title"] }}</h4>
+                      <p class="subtitle fw-semibold mt-3">{{ $galery["description"] }}</p>
+                      <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
+                    </div>
+                    <div class="col">
+                      <img class="img-fluid" src="{{ $galery["photoUrl"] }}" width="300px" alt="Galeri Nasional Indonesia">
+                    </div>
+                  </div>  
+                @endif
+              @endforeach
 
               <!-- Jakbar -->
               <h3 class="fw-bolder mb-3" id="list-item-2">Jakarta Barat</h3>
-              <div class="row mb-5">
-                <div class="col">
-                  <img class="img-fluid" src="./img/galeri/galeri-nadi.jpeg" width="300px" style="border-radius: 10px;" alt="Galeri Nadi">
-                </div>
-                <div class="col-md-7">
-                  <h4 class="mt-3">Galeri Nadi</h4>
-                  <p class="subtitle fw-semibold mt-3">Galeri Nadi adalah ruang seni di Jakarta yang didirikan oleh seorang kolektor muda Seni Rupa Indonesia: Biantoro Santoso pada tahun 2000. Kata “Nadi” dalam bahasa Indonesia berarti denyut nadi, dan seperti namanya, artspace bermaksud untuk menghidupkan perkembangan seni rupa kontemporer di Indonesia. Galeri Nadi menampilkan karya-karya seniman seperti Agus Suwage, Handiwirman Saputra, dan Jumaldi Alfi.</p>
-                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
-                </div>
-              </div>              
+              @foreach ($galeries as $galery)
+                @if ($galery["location"] == "jb")
+                  <div class="row mb-5">
+                    <div class="col-md-7">
+                      <h4 class="mt-3">{{ $galery["title"] }}</h4>
+                      <p class="subtitle fw-semibold mt-3">{{ $galery["description"] }}</p>
+                      <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
+                    </div>
+                    <div class="col">
+                      <img class="img-fluid" src="{{ $galery["photoUrl"] }}" width="300px" alt="Galeri Nasional Indonesia">
+                    </div>
+                  </div>  
+                @endif
+              @endforeach           
 
 
               <!-- Jaksel -->
               <h3 class="fw-bolder mb-3" id="list-item-3">Jakarta Selatan</h3>
-              <div class="row mb-5">
-                <div class="col">
-                  <img class="img-fluid" src="./img/galeri/galeri-hadiprana.png" width="300px" style="border-radius: 10px;" alt="Galeri Hadiprana">
-                </div>
-                <div class="col-md-7">
-                  <h4 class="mt-3">Galeri Hadiprana</h4>
-                  <p class="subtitle fw-semibold mt-3">Galeri yang didirikan sejak 1961 ini menampilkan seni - seni lukisan dari nusantaran dan mancanegara. Selain memamerkan kesenian, di tempat ini juga terdapat kelas untuk mempelajari mengenai kesenian.</p>
-                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
-                </div>
-              </div>
+              @foreach ($galeries as $galery)
+                @if ($galery["location"] == "js")
+                  <div class="row mb-5">
+                    <div class="col-md-7">
+                      <h4 class="mt-3">{{ $galery["title"] }}</h4>
+                      <p class="subtitle fw-semibold mt-3">{{ $galery["description"] }}</p>
+                      <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
+                    </div>
+                    <div class="col">
+                      <img class="img-fluid" src="{{ $galery["photoUrl"] }}" width="300px" alt="Galeri Nasional Indonesia">
+                    </div>
+                  </div>  
+                @endif
+              @endforeach
 
               <!-- Jakut -->
               <h3 class="fw-bolder mb-3" id="list-item-4">Jakarta Utara</h3>
-              <div class="row mb-5">
-                <div class="col">
-                  <img class="img-fluid" src="./img/galeri/galeri-artone.jpeg" width="300px" style="border-radius: 10px;" alt="Galeri Art One">
-                </div>
-                <div class="col-md-7">
-                  <h4 class="mt-3">Galeri Art One</h4>
-                  <p class="subtitle fw-semibold mt-3">Berlokasi di Kemayoran, Galeri Art One memiliki bangunan serba putih yang berseni. Galeri ini memamerkan lebih dari 2000 koleksi karya seni dari seniman dari berbagai dekade. Galeri Art One adalah “one-stop art destination” yang menampung galeri seniman senior sekaligus memberikan konsultasi seni, restorasi, dan pendidikan bagi seniman muda.</p>
-                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
-                </div>
-              </div>  
+              @foreach ($galeries as $galery)
+                @if ($galery["location"] == "ju")
+                  <div class="row mb-5">
+                    <div class="col-md-7">
+                      <h4 class="mt-3">{{ $galery["title"] }}</h4>
+                      <p class="subtitle fw-semibold mt-3">{{ $galery["description"] }}</p>
+                      <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
+                    </div>
+                    <div class="col">
+                      <img class="img-fluid" src="{{ $galery["photoUrl"] }}" width="300px" alt="Galeri Nasional Indonesia">
+                    </div>
+                  </div>  
+                @endif
+              @endforeach
 
               <!-- Jaktim -->
               <h3 class="fw-bolder mb-3" id="list-item-5">Jakarta Timur</h3>
-              <div class="row mb-5">
-                <div class="col">
-                  <img class="img-fluid" src="./img/galeri/galeri-pasarseni.jpeg" width="300px" style="border-radius: 10px;" alt="Galeri Pasar Seni">
-                </div>
-                <div class="col-md-7">
-                  <h4 class="mt-3">Galeri Pasar Seni</h4>
-                  <p class="subtitle fw-semibold mt-3">Galeri ini baru diresmikan tahun 2020 oleh Pemerintah Kota Jakarta Timur.Galeri disebut juga pasar karena berisikan kios-kios yang menjual lukisan, patung, kaset, vinyl atau piringan hitam, turntable (alat pemutar piringan hitam), lemari kayu jati, buku sastra, bingkai foto, dan alat seni lainnya.</p>
-                  <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="#">Lihat semua</a></button>
-                </div>
-              </div> 
+              @foreach ($galeries as $galery)
+                @if ($galery["location"] == "jt")
+                  <div class="row mb-5">
+                    <div class="col-md-7">
+                      <h4 class="mt-3">{{ $galery["title"] }}</h4>
+                      <p class="subtitle fw-semibold mt-3">{{ $galery["description"] }}</p>
+                      <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
+                    </div>
+                    <div class="col">
+                      <img class="img-fluid" src="{{ $galery["photoUrl"] }}" width="300px" alt="Galeri Nasional Indonesia">
+                    </div>
+                  </div>  
+                @endif
+              @endforeach
             </div>
           </div>
         </div>

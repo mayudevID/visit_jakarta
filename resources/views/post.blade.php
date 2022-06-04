@@ -11,29 +11,20 @@
     </button>
     <!-- Akhir scroll top button -->
     <main>
-        <section class="container md-4">
-            <article>
+        <section class="container my-4">
+            <article class="my-3 ft-5">
                 <h2>{{ $post["title"] }}</h2>
                 <h5>
-                    @if ($post->category->name != "Kuliner")
-                        {{ $post->category->name }} di
-                        @if ($post->location == "jp")
-                            Jakarta Pusat
-                        @elseif ($post->location == "jb")  
-                            Jakarta Barat
-                        @elseif ($post->location == "js")
-                            Jakarta Selatan
-                        @elseif ($post->location == "ju")
-                            Jakarta Utara
-                        @elseif ($post->location == "jt")
-                            Jakarta Timur           
-                        @endif
-                    @elseif ($post->location == "ju")
-                        Makanan di Jakarta
-                    @elseif ($post->location == "js")
-                        Minuman di Jakarta
+                @if ($post->category->name != 'Kuliner')
+                    {{ $post->location->name }}
+                @else
+                    @if ($post->location->name == 'Jakarta Utara')
+                        Makanan
+                    @else
+                        Minuman
                     @endif
-                </h5>
+                @endif
+                </h5>       
                 <p>{!! $post["body"] !!}</p>
             </article>
         </section>

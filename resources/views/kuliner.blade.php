@@ -25,15 +25,15 @@
               <!-- Makanan -->
               <h3 class="fw-bolder mt-3 mb-3" id="list-item-1">Makanan</h3>
               @foreach ($culinaries as $culinary)
-                @if ($culinary["location"] == "ju")
+                @if ($culinary->location->name == "Jakarta Utara")
                   <div class="row mb-5">
                     <div class="col-md-7">
-                      <h4 class="mt-3">"{{ $culinary["title"] }}"</h4>
+                      <h4 class="mt-3">{{ $culinary["title"] }}</h4>
                       <p class="subtitle fw-semibold mt-3">{{ $culinary["description"] }}</p>
                       <button class="btn btn-purple button-kuliner mt-2 mb-3"><a href="/kuliner/{{ $culinary["slug"] }}">Lihat restoran</a></button>
                     </div>
                     <div class="col">
-                      <img class="img-fluid" src="{{ $culinary["photoUrl"] }}" width="300px" alt="Soto Betawi">
+                      <img class="img-fluid" src="{{ asset('storage/' . $culinary->image) }}" width="300px" alt="Soto Betawi">
                     </div>
                   </div>
                 @endif
@@ -42,15 +42,15 @@
               <!-- Minuman -->
               <h3 class="fw-bolder mb-3" id="list-item-2">Minuman</h3>
               @foreach ($culinaries as $culinary)
-                @if ($culinary["location"] == "js")
+                @if ($culinary->location->name == "Jakarta Selatan")
                   <div class="row mb-5">
                     <div class="col-md-7">
-                      <h4 class="mt-3">"{{ $culinary["title"] }}"</h4>
+                      <h4 class="mt-3">{{ $culinary["title"] }}</h4>
                       <p class="subtitle fw-semibold mt-3">{{ $culinary["description"] }}</p>
                       <button class="btn btn-purple button-kuliner mt-2 mb-3"><a href="/kuliner/{{ $culinary["slug"] }}">Lihat restoran</a></button>
                     </div>
                     <div class="col">
-                      <img class="img-fluid" src="{{ $culinary["photoUrl"] }}" width="300px" alt="Soto Betawi">
+                      <img class="img-fluid" src="{{ asset('storage/' . $culinary->image) }}" width="300px" alt="Soto Betawi">
                     </div>
                   </div>
                 @endif

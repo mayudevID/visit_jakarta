@@ -27,6 +27,7 @@ Route::get('/dashboard', function () {
     ]);
 })->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+Route::get('/dashboard/post/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 
 Route::get('/', function () {
     return view('beranda' , [

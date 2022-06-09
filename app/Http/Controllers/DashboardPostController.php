@@ -59,7 +59,7 @@ class DashboardPostController extends Controller
         }
 
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['description'] = Str::limit($request->body, 200);  
+        $validatedData['description'] = Str::limit($request->body, 0, "");  
         
         Post::create($validatedData);
 
@@ -124,7 +124,7 @@ class DashboardPostController extends Controller
         }
 
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['description'] = Str::limit($request->body, 200);  
+        $validatedData['description'] = Str::limit($request->body, 0, "");  
         
         Post::where('id', $post->id)->update($validatedData);
 

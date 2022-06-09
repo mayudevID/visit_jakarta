@@ -13,6 +13,12 @@
               Posts
             </a>
           </li>
+          <hr/>
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <b>Visit Jakarta Website</b> 
+            </a>
+          </li>
         </ul>
         
       </div>

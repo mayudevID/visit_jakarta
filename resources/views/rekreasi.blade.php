@@ -28,27 +28,16 @@
               <!-- Jakpus -->
               <h3 class="fw-bolder mt-3 mb-3" id="list-item-1">Jakarta Pusat</h3>
               @foreach ($recreations as $recreation)
-                @if ($museum->location->name == "Jakarta Pusat")
+                @if ($recreation->location->name == "Jakarta Pusat")
                   <div class="row mb-5">
-                    @if (@loop->odd)
-                      <div class="col-md-7">
+                    <div class="col-md-7">
                         <h4 class="mt-3">{{ $recreation["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
                         <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->mainPhoto) }}" width="300px" alt="{{ $recreation->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $recreation["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
-                        <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
-                      </div>
-                    @endif
                   </div>                
                 @endif
               @endforeach
@@ -56,27 +45,16 @@
               <!-- Jakbar -->
               <h3 class="fw-bolder mb-3" id="list-item-2">Jakarta Barat</h3>
               @foreach ($recreations as $recreation)
-                @if ($museum->location->name == "Jakarta Barat")
+                @if ($recreation->location->name == "Jakarta Barat")
                   <div class="row mb-5">
-                  @if (@loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $recreation["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
                         <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->mainPhoto) }}" width="300px" alt="{{ $recreation->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $recreation["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
-                        <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
-                      </div>
-                    @endif
                   </div>                
                 @endif
               @endforeach
@@ -84,27 +62,16 @@
               <!-- Jaksel -->
               <h3 class="fw-bolder mb-3" id="list-item-3">Jakarta Selatan</h3>
               @foreach ($recreations as $recreation)
-                @if ($museum->location->name == "Jakarta Selatan")
+                @if ($recreation->location->name == "Jakarta Selatan")
                   <div class="row mb-5">
-                  @if (@loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $recreation["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
                         <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->mainPhoto) }}" width="300px" alt="{{ $recreation->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $recreation["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
-                        <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
-                      </div>
-                    @endif
                   </div>                
                 @endif
               @endforeach
@@ -112,27 +79,16 @@
               <!-- Jakut -->
               <h3 class="fw-bolder mb-3" id="list-item-4">Jakarta Utara</h3>
               @foreach ($recreations as $recreation)
-                @if ($museum->location->name == "Jakarta Utara")
+                @if ($recreation->location->name == "Jakarta Utara")
                   <div class="row mb-5">
-                  @if (@loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $recreation["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
                         <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->mainPhoto) }}" width="300px" alt="{{ $recreation->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $recreation["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
-                        <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
-                      </div>
-                    @endif
                   </div>                
                 @endif
               @endforeach
@@ -140,27 +96,16 @@
               <!-- Jaktim -->
               <h3 class="fw-bolder mb-3" id="list-item-5">Jakarta Timur</h3>
               @foreach ($recreations as $recreation)
-                @if ($museum->location->name == "Jakarta Timur")
+                @if ($recreation->location->name == "Jakarta Timur")
                   <div class="row mb-5">
-                  @if (@loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $recreation["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
                         <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->mainPhoto) }}" width="300px" alt="{{ $recreation->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $recreation->image) }}" width="300px" alt="{{ $recreation->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $recreation["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $recreation["description"] !!}</p>
-                        <button class="btn btn-purple button-rekreasi mt-2 mb-3"><a href="/rekreasi/{{ $recreation["slug"] }}">Lihat semua</a></button>
-                      </div>
-                    @endif
                   </div>                
                 @endif
               @endforeach

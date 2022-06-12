@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Location;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -50,18 +51,27 @@ class DashboardPostController extends Controller
             'slug' => 'required|unique:posts',
             'category_id' => 'required',
             'location_id' => 'required',
-            'image' => 'image|file|max:2048',    
+            'mainPhoto' => 'required|image|file|max:2048',    
             'body' => 'required',
         ]);
 
-        if ($request->hasFile('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');    
-        }
-
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['description'] = Str::limit($request->body, 0, "");  
+        $validatedData['mainPhoto'] = $request->file('mainPhoto')->store('post-images');
         
-        Post::create($validatedData);
+        $post = Post::create($validatedData);
+
+        if ($request->hasFile('images')) {
+            $images = $request->file('images');
+            
+            foreach ($images as $image) {
+                $img = $image->store('post-images');  
+                Image::create([
+                    'post_id' => $post->id,
+                    'photoUrl' => $img,
+                ]);
+            }
+        }
 
         return redirect('/dashboard/posts')->with('success', 'New post has been added!');
     }
@@ -106,7 +116,7 @@ class DashboardPostController extends Controller
             'title' => 'required|max:255',
             'category_id' => 'required',
             'location_id' => 'required',
-            'image' => 'image|file|max:2048',
+            'mainPhoto' => 'image|file|max:2048',
             'body' => 'required',
         ];
 
@@ -116,15 +126,32 @@ class DashboardPostController extends Controller
 
         $validatedData = $request->validate($rules);
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('mainPhoto')) {
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');    
+            $validatedData['mainPhoto'] = $request->file('mainPhoto')->store('post-images');    
         }
 
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['description'] = Str::limit($request->body, 0, "");  
+        $validatedData['description'] = Str::limit($request->body, 0, ""); 
+
+        if ($request->hasFile('images')) {
+            $oldImages = Image::where('post_id', $post->id)->get();
+            foreach ($oldImages as $oldImage) {
+                Storage::delete($oldImage->photoUrl);
+                Image::where('post_id', $post->id)->delete();
+            }
+            
+            $images = $request->file('images');
+            foreach ($images as $image) {
+                $img = $image->store('post-images');  
+                Image::create([
+                    'post_id' => $post->id,
+                    'photoUrl' => $img,
+                ]);
+            }
+        }
         
         Post::where('id', $post->id)->update($validatedData);
 
@@ -139,9 +166,17 @@ class DashboardPostController extends Controller
      */
     public function destroy(Post $post)
     {
-        if ($post->image) {
-            Storage::delete($post->image);
+        if ($post->mainPhoto) {
+            Storage::delete($post->mainPhoto);
+            Image::where('post_id', $post->id)->delete();
         }
+
+        $postImages = Image::where('post_id', $post->id)->get();
+
+        foreach ($postImages as $image) {
+            Storage::delete($image->photoUrl);
+        }
+
         Post::destroy($post->id);
 
         return redirect('/dashboard/posts')->with('success', 'Post has been deleted !');

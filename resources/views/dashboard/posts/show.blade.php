@@ -23,13 +23,7 @@
                         @csrf
                         <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span>Delete</button>
                 </form>
-                @if ($post->image)
-                <center>
-                    <div style="max-height: 350px; overflow:hidden;">
-                        <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid mt-3">
-                    </div>                 
-                </center>
-                @endif 
+                
             </div>  
             <article class="my-3 fs-6">
                 {!! $post["body"] !!}
@@ -37,3 +31,5 @@
         </section>
     </main>
 @endsection
+
+

@@ -27,25 +27,14 @@
               @foreach ($culinaries as $culinary)
                 @if ($culinary->location->name == "Jakarta Utara")
                   <div class="row mb-5">
-                    @if ($loop->odd)
-                      <div class="col-md-7">
+                    <div class="col-md-7">
                         <h4 class="mt-3">{{ $culinary["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $culinary["description"] !!}</p>
                         <button class="btn btn-purple button-kuliner mt-2 mb-3"><a href="/kuliner/{{ $culinary["slug"] }}">Lihat restoran</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $culinary->image) }}" width="300px" alt="{{ $culinary->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $culinary->mainPhoto) }}" width="300px" alt="{{ $culinary->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $culinary->image) }}" width="300px" alt="{{ $culinary->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $culinary["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $culinary["description"] !!}</p>
-                        <button class="btn btn-purple button-kuliner mt-2 mb-3"><a href="/kuliner/{{ $culinary["slug"] }}">Lihat restoran</a></button>
-                      </div>
-                    @endif
                   </div>
                 @endif
               @endforeach
@@ -55,25 +44,14 @@
               @foreach ($culinaries as $culinary)
                 @if ($culinary->location->name == "Jakarta Selatan")
                   <div class="row mb-5">
-                  @if ($loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $culinary["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $culinary["description"] !!}</p>
                         <button class="btn btn-purple button-kuliner mt-2 mb-3"><a href="/kuliner/{{ $culinary["slug"] }}">Lihat restoran</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $culinary->image) }}" width="300px" alt="{{ $culinary->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $culinary->mainPhoto) }}" width="300px" alt="{{ $culinary->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $culinary->image) }}" width="300px" alt="{{ $culinary->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $culinary["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $culinary["description"] !!}</p>
-                        <button class="btn btn-purple button-kuliner mt-2 mb-3"><a href="/kuliner/{{ $culinary["slug"] }}">Lihat restoran</a></button>
-                      </div>
-                    @endif
                   </div>
                 @endif
               @endforeach

@@ -65,17 +65,47 @@
             @endforeach  
             </select>
           </div>
-
+          
           <div class="mb-3">
-            <label for="image" class="form-label">Post Image</label>
+            <label for="mainPhoto" class="form-label">Main Photo</label>
             <img class="img-preview img-fluid mb-3 col-sm-5">
-            <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
-            @error('image')
+            <input class="form-control @error('mainPhoto') is-invalid @enderror" type="file" id="mainPhoto" name="mainPhoto" onchange="previewImage()">
+            @error('mainPhoto')
               <div class="invalid-feedback">
                 {{ $message }}
               </div>
             @enderror  
           </div>
+
+          <div class="mb-3">
+            <label for="images" class="form-label">Post Image</label>
+            <img class="img-preview img-fluid mb-3 col-sm-5">
+            <input class="form-control @error('images') is-invalid @enderror" type="file" id="images" name="images[]" multiple>
+            @error('images')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+            @enderror  
+          </div>
+
+
+          <!-- <div class="mb-3">
+            <label for="filename" class="form-label">Post Image</label>
+            <div class="input-group control-group increment" >
+              <input type="file" name="filename[]" class="form-control">
+              <div class="input-group-btn"> 
+                <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+              </div>
+            </div>
+            <div class="clone hide">
+              <div class="control-group input-group" style="margin-top:10px">
+                <input type="file" name="filename[]" class="form-control">
+                <div class="input-group-btn"> 
+                  <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
 
           <div class="mb-3">
             <label for="body" class="form-label">Body</label>
@@ -108,7 +138,7 @@
   });
 
   function previewImage() {
-    const image = document.querySelector('#image');
+    const image = document.querySelector('#mainPhoto');
     const imgPreview = document.querySelector('.img-preview');
 
     imgPreview.style.display = "block";

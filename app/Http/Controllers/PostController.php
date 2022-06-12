@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Image;
 
 class PostController extends Controller
 {
@@ -11,7 +12,8 @@ class PostController extends Controller
     {
         return view('museum', [
             'title' => 'museum',
-            'museums' => Post::where('category_id', 1)->get()
+            'museums' => Post::where('category_id', 1)->get(),
+            'images' => Image::all()
         ]);
     }
 
@@ -19,7 +21,8 @@ class PostController extends Controller
     {
         return view('galeri',[
             'title' => 'galeri',
-            'galeries' => Post::where('category_id', 2)->get()
+            'galeries' => Post::where('category_id', 2)->get(),
+            'images' => Image::all()
         ]);
     }
     
@@ -27,7 +30,8 @@ class PostController extends Controller
     {
         return view('kuliner', [
             'title' => 'kuliner',
-            'culinaries' => Post::where('category_id', 3)->get()
+            'culinaries' => Post::where('category_id', 3)->get(),
+            'images' => Image::all()
         ]);
     }
 
@@ -35,7 +39,8 @@ class PostController extends Controller
     {
         return view('rekreasi', [
             'title' => 'rekreasi',
-            'recreations' => Post::where('category_id', 4)->get()
+            'recreations' => Post::where('category_id', 4)->get(),
+            'images' => Image::all()
         ]);
     }
 
@@ -43,7 +48,8 @@ class PostController extends Controller
     {
         return view('post', [
             "title" => "Single Post",
-            "post" => $post
+            "post" => $post,
+            "images" => Image::where('post_id', $post->id)->get(),
         ]);
     }
 }

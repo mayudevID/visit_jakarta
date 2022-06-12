@@ -30,25 +30,14 @@
               @foreach ($galeries as $galery)
                 @if ($galery->location->name == "Jakarta Pusat")
                   <div class="row mb-5">
-                    @if ($loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $galery["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
                         <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
-                      </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $galery["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
-                        <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
-                      </div>                
-                    @endif                   
+                        <img class="img-fluid" src="{{ asset('storage/' . $galery->mainPhoto) }}" width="300px" alt="{{ $galery->title }}">
+                      </div>               
                   </div>  
                 @endif
               @endforeach
@@ -58,25 +47,14 @@
               @foreach ($galeries as $galery)
                 @if ($galery->location->name == "Jakarta Barat")
                   <div class="row mb-5">
-                  @if ($loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $galery["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
                         <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $galery->mainPhoto) }}" width="300px" alt="{{ $galery->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $galery["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
-                        <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
-                      </div>                
-                    @endif 
                   </div>  
                 @endif
               @endforeach           
@@ -87,25 +65,14 @@
               @foreach ($galeries as $galery)
                 @if ($galery->location->name == "Jakarta Selatan")
                   <div class="row mb-5">
-                  @if ($loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $galery["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
                         <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $galery->mainPhoto) }}" width="300px" alt="{{ $galery->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $galery["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
-                        <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
-                      </div>                
-                    @endif 
                   </div>  
                 @endif
               @endforeach
@@ -115,25 +82,14 @@
               @foreach ($galeries as $galery)
                 @if ($galery->location->name == "Jakarta Utara")
                   <div class="row mb-5">
-                  @if ($loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $galery["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
                         <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $galery->mainPhoto) }}" width="300px" alt="{{ $galery->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $galery["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
-                        <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
-                      </div>                
-                    @endif 
                   </div>  
                 @endif
               @endforeach
@@ -143,25 +99,14 @@
               @foreach ($galeries as $galery)
                 @if ($galery->location->name == "Jakarta Timur")
                   <div class="row mb-5">
-                  @if ($loop->odd)
-                      <div class="col-md-7">
+                  <div class="col-md-7">
                         <h4 class="mt-3">{{ $galery["title"] }}</h4>
                         <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
                         <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
                       </div>
                       <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
+                        <img class="img-fluid" src="{{ asset('storage/' . $galery->mainPhoto) }}" width="300px" alt="{{ $galery->title }}">
                       </div>
-                    @else
-                      <div class="col">
-                        <img class="img-fluid" src="{{ asset('storage/' . $galery->image) }}" width="300px" alt="{{ $galery->title }}">
-                      </div>
-                      <div class="col-md-7">
-                        <h4 class="mt-3">{{ $galery["title"] }}</h4>
-                        <p class="subtitle fw-semibold mt-3">{!! $galery["description"] !!}</p>
-                        <button class="btn btn-purple button-galeri mt-2 mb-3"><a href="/galeri/{{ $galery["slug"] }}">Lihat semua</a></button>
-                      </div>                
-                    @endif 
                   </div>  
                 @endif
               @endforeach

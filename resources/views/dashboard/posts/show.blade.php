@@ -23,7 +23,9 @@
                         @csrf
                         <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span>Delete</button>
                 </form>
-                
+            <div class="my-4">
+                <img src="{{  asset('storage/' . $post->mainPhoto) }}" width="300px" alt="">
+            </div>    
             </div>  
             <article class="my-3 fs-6">
                 {!! $post["body"] !!}

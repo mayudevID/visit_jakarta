@@ -116,7 +116,7 @@ class DashboardPostController extends Controller
             'title' => 'required|max:255',
             'category_id' => 'required',
             'location_id' => 'required',
-            'mainPhoto' => 'image|file|max:2048',
+            'mainPhoto' => 'image|file',
             'body' => 'required',
         ];
 
